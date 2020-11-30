@@ -31,7 +31,7 @@ export default function Images({src, alt}) {
         clearTimeout(timer);
         timer = setTimeout(nextImage, 3000);
 
-        return () => {clearTimeout(timer)};
+        return () => clearTimeout(timer);
 
     }, [currentImage]);
 

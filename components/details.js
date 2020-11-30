@@ -1,5 +1,6 @@
 import styles from '../styles/Figure.module.css';
 import Images from './images';
+import React from 'react';
 
 export default function Details({photos, title, text}) {
 

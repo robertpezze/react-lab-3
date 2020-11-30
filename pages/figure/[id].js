@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import styles from '../../styles/Figure.module.css';
 import { useRouter } from 'next/router';
-import { useEffect} from 'react';
+import { useEffect } from 'react';
 import Nav from '../../components/nav';
 import Layout from '../../components/layout';
 import Details from '../../components/details';
-
 
 export default function Figure(props) {
 
@@ -29,14 +28,13 @@ export default function Figure(props) {
                 <title>{title} by CarvedLife</title>
             </Head>
 
-            <Details photos={photos} title={title} text={text} />
+            <Details photos={photos} title={title} text={text}/>
 
-            <Nav id={id} next={next} />
+            <Nav id={id} next={next}/>
 
         </Layout>
     );
 }
-
 
 // This function gets called at build time
 export async function getStaticPaths() {
@@ -46,7 +44,7 @@ export async function getStaticPaths() {
 
     const paths = figures.map((figure) => `/figure/${figure.id}`);
 
-    return {paths, fallback: true};
+    return {paths, fallback: false};
 }
 
 // This also gets called at build time
@@ -55,6 +53,6 @@ export async function getStaticProps({params}) {
     const res    = await fetch(`http://insta.heby.nu?id=${params.id}`);
     const figure = await res.json();
 
-    return {props: {...figure}};
+    return {props: figure};
 }
 
