@@ -25,7 +25,7 @@ export default function Home({figures}) {
 // This also gets called at build time
 export async function getStaticProps() {
 
-    const res     = await fetch(`http://insta.heby.nu`);
+    const res     = await fetch(`https://insta.heby.nu`);
     const figures = await res.json();
 
     return {props: {figures}};

@@ -39,7 +39,7 @@ export default function Figure(props) {
 // This function gets called at build time
 export async function getStaticPaths() {
 
-    const res     = await fetch('http://insta.heby.nu');
+    const res     = await fetch('https://insta.heby.nu');
     const figures = await res.json();
 
     const paths = figures.map((figure) => `/figure/${figure.id}`);
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
 // This also gets called at build time
 export async function getStaticProps({params}) {
 
-    const res    = await fetch(`http://insta.heby.nu?id=${params.id}`);
+    const res    = await fetch(`https://insta.heby.nu?id=${params.id}`);
     const figure = await res.json();
 
     return {props: figure};
