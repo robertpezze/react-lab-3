@@ -1,0 +1,59 @@
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.figure {
+    width: 600px;
+}
+
+
+.figure img {
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #444;
+    color: #fff;
+    position: relative;
+    top: -50px;
+    text-align: center;
+    margin: 0;
+}
+
+.description {
+    color: #444;
+    padding:0;
+    margin: 0;
+    position: relative;
+    top: -30px;
+}
+
+
+.navigation {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    color: #0000ff;
+}
