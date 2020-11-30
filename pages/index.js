@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Layout from '../components/layout';
 import Thumb from '../components/thumb';
+import React from 'react';
 
 export default function Home({figures}) {
 

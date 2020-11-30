@@ -29,13 +29,9 @@ export default function Figure(props) {
                 <title>{title} by CarvedLife</title>
             </Head>
 
-            <main className={styles.main}>
+            <Details photos={photos} title={title} text={text} />
 
-                <Details photos={photos} title={title} text={text} />
-
-                <Nav id={id} next={next} />
-
-            </main>
+            <Nav id={id} next={next} />
 
         </Layout>
     );

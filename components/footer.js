@@ -5,7 +5,7 @@ export default function Footer() {
     return (
 
         <footer className={styles.footer}>
-            Powered by <img src="/logo.png" alt="CarvedLife" />
+                Powered by <img src="/logo.png" alt="CarvedLife" />
         </footer>
 
     );
