@@ -2,6 +2,9 @@ import styles from '../styles/Layout.module.css';
 import Head from 'next/head';
 import Header from './header';
 import Footer from './footer';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import React from 'react';
 
 export default function Layout(props) {
 
@@ -21,6 +24,7 @@ export default function Layout(props) {
             </main>
 
             <Footer />
+            <ToastContainer />
 
         </div>
 

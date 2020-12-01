@@ -23,11 +23,11 @@ export default function Images({src, alt}) {
     };
 
 
+    /**
+     * Rotate images every 3 seconds
+     */
     useEffect(() => {
 
-        /**
-         * Rotate images every 3 seconds
-         */
         clearTimeout(timer);
         timer = setTimeout(nextImage, 3000);
 

@@ -1,20 +1,19 @@
 import Head from 'next/head';
-import styles from '../../styles/Figure.module.css';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../components/nav';
 import Layout from '../../components/layout';
 import Details from '../../components/details';
 
 export default function Figure(props) {
 
-    let {id, photos, title, text, next} = props;
+    let {id, photos, title, text, next, votes} = props;
 
     const router = useRouter();
 
+    //If no image, go to first
     useEffect(() => {
 
-        //If no image, go to first
         if (!id) {
             router.push('/figure/1');
         }
@@ -28,7 +27,7 @@ export default function Figure(props) {
                 <title>{title} by CarvedLife</title>
             </Head>
 
-            <Details photos={photos} title={title} text={text}/>
+            <Details id={id} photos={photos} title={title} text={text} votes={votes} />
 
             <Nav id={id} next={next}/>
 
